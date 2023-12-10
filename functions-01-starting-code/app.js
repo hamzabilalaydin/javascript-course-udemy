@@ -20,8 +20,8 @@ const getPlayerChoice = function () {
     selection !== PAPER &&
     selection !== SCISSORS
   ) {
-    alert(`Invalid choice! We choose ${ROCK} for you`);
-    return DEFAULT_USER_CHOICE;
+    alert(`Invalid choice! We choose ${DEFAULT_USER_CHOICE} for you`);
+    return;
   }
   return selection;
 };
@@ -50,7 +50,8 @@ const getComputerChoice = function () {
 //---BOTH CODES ARE DOING THE EXACT THING---//
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>//
 
-const getWinner = function (cChoice, pChoice) {
+const getWinner = function (cChoice, pChoice = DEFAULT_USER_CHOICE) {
+  //what after the equal sign is default value
   if (cChoice === pChoice) {
     return RESULT_DRAW;
   } else if (
