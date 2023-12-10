@@ -37,6 +37,19 @@ const getComputerChoice = function () {
   }
 };
 
+// const getWinner = (cChoice, pChoice) =>
+//   cChoice === pChoice
+//     ? RESULT_DRAW
+//     : (cChoice === ROCK && pChoice === PAPER) ||
+//       (cChoice === PAPER && pChoice === SCISSORS) ||
+//       (cChoice === SCISSORS && pChoice === ROCK)
+//     ? RESULT_PLAYER_WIN
+//     : RESULT_COMPUTER_WIN;
+
+//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<//
+//---BOTH CODES ARE DOING THE EXACT THING---//
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>//
+
 const getWinner = function (cChoice, pChoice) {
   if (cChoice === pChoice) {
     return RESULT_DRAW;
