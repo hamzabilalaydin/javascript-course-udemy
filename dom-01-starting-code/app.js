@@ -1,17 +1,15 @@
-const h1 = document.getElementById("main-title");
+const section = document.querySelector("section");
+const button = document.querySelector("button");
 
-h1.textContent = "some new TITLE";
-h1.style.color = "white";
-h1.style.backgroundColor = "black";
+// section.style.backgroundColor = "blue";
+section.className = "red-bg";
 
-const li = document.querySelector("li:last-of-type");
-li.textContent = li.textContent + " (Changed!) ";
+button.addEventListener("click", () => {
+  // if (section.className === "red-bg visible") {
+  //   section.className = "red-bg invisible";
+  // } else {
+  //   section.className = "red-bg visible";
+  // }
 
-const body = document.body;
-
-//const listItemElements = document.querySelectorAll("li");
-const listItemElements = document.getElementsByTagName("li");
-
-for (const listItemEl of listItemElements) {
-  console.dir(listItemEl);
-}
+  section.classList.toggle("invisible");
+});
