@@ -49,7 +49,13 @@
 
 const testResult = [1, 5.3, 1.5, 10.9, -5, 10];
 
-let testResultsCopy = testResult.slice(); // when using like this slice returns a copy of an array
-testResultsCopy = testResult.slice(0, 2); // selecting ranges both are indexes so second one needs to be higher thane first one
-testResultsCopy = testResult.slice(2); // if we use just one parameter it will start that index to the end of an array and returns it
-console.log(testResultsCopy);
+// let testResultsCopy = testResult.slice(); // when using like this slice returns a copy of an array
+// testResultsCopy = testResult.slice(0, 2); // selecting ranges both are indexes so second one needs to be higher thane first one
+// testResultsCopy = testResult.slice(2); // if we use just one parameter it will start that index to the end of an array and returns it
+// console.log(testResultsCopy);
+
+const storedResult = testResult.concat([1, 2, 5, 7]); // concat returns brand new array
+
+testResult.push(5.82);
+
+console.log(testResult, storedResult);
