@@ -54,26 +54,29 @@ const testResult = [1, 5.3, 1.5, 10.9, 1.5, -5, 10];
 // testResultsCopy = testResult.slice(2); // if we use just one parameter it will start that index to the end of an array and returns it
 // console.log(testResultsCopy);
 
-const storedResult = testResult.concat([1, 2, 5, 7]); // concat returns brand new array
+// const storedResult = testResult.concat([1, 2, 5, 7]); // concat returns brand new array
 
-testResult.push(5.82);
+// testResult.push(5.82);
 
-console.log(testResult, storedResult);
-console.log(testResult.lastIndexOf(1.5));
+// console.log(testResult, storedResult);
+// console.log(testResult.lastIndexOf(1.5));
 
-const personData = [{ name: "Hba" }, { name: "Manuel" }];
-console.log(personData.indexOf({ name: "Manuel" }));
+// console.log(testResult.includes(10.9));
+// console.log(testResult.indexOf(10.9) !== -1);
 
-const manuel = personData.find((person, idx, persons) => {
-  return person.name === "Manuel";
-});
+// const personData = [{ name: "Hba" }, { name: "Manuel" }];
+// console.log(personData.indexOf({ name: "Manuel" }));
 
-manuel.name = "Anna";
+// const manuel = personData.find((person, idx, persons) => {
+//   return person.name === "Manuel";
+// });
 
-console.log(manuel, personData);
+// manuel.name = "Anna";
 
-const hbaIndex = personData.findIndex((person, idx, persons) => {
-  return person.name === "Hba";
-});
+// console.log(manuel, personData);
 
-console.log(hbaIndex);
+// const hbaIndex = personData.findIndex((person, idx, persons) => {
+//   return person.name === "Hba";
+// });
+
+// console.log(hbaIndex);
