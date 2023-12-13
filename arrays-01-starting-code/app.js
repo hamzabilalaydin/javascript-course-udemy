@@ -47,7 +47,7 @@
 // hobbies.splice(0, 1);
 // console.log(hobbies);
 
-const testResult = [1, 5.3, 1.5, 10.9, 1.5, -5, 10];
+// const testResult = [1, 5.3, 1.5, 10.9, 1.5, -5, 10];
 
 // let testResultsCopy = testResult.slice(); // when using like this slice returns a copy of an array
 // testResultsCopy = testResult.slice(0, 2); // selecting ranges both are indexes so second one needs to be higher thane first one
@@ -80,3 +80,17 @@ const testResult = [1, 5.3, 1.5, 10.9, 1.5, -5, 10];
 // });
 
 // console.log(hbaIndex);
+
+const prices = [10.99, 5.99, 3.99, 6.59];
+const tax = 0.19;
+const taxAdjustedPrices = [];
+
+// for (const price of prices) {
+//   taxAdjustedPrices.push(price * (1 + tax));
+// }
+
+prices.forEach((price) => {
+  taxAdjustedPrices.push(price * (1 + tax));
+});
+
+console.log(taxAdjustedPrices);
