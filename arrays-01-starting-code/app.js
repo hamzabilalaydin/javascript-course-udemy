@@ -40,3 +40,9 @@ console.log(hobbies);
 hobbies[1] = "Coding";
 hobbies[5] = "Reading";
 console.log(hobbies);
+
+hobbies.splice(1, 0, "Walking");
+console.log(hobbies);
+
+hobbies.splice(0, 1);
+console.log(hobbies);
