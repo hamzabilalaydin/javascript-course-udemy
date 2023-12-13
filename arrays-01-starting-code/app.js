@@ -47,7 +47,7 @@
 // hobbies.splice(0, 1);
 // console.log(hobbies);
 
-const testResult = [1, 5.3, 1.5, 10.9, -5, 10];
+const testResult = [1, 5.3, 1.5, 10.9, 1.5, -5, 10];
 
 // let testResultsCopy = testResult.slice(); // when using like this slice returns a copy of an array
 // testResultsCopy = testResult.slice(0, 2); // selecting ranges both are indexes so second one needs to be higher thane first one
@@ -59,3 +59,7 @@ const storedResult = testResult.concat([1, 2, 5, 7]); // concat returns brand ne
 testResult.push(5.82);
 
 console.log(testResult, storedResult);
+console.log(testResult.lastIndexOf(1.5));
+
+const personData = [{ name: "Hba" }, { name: "Manuel" }];
+console.log(personData.indexOf({ name: "Manuel" }));
