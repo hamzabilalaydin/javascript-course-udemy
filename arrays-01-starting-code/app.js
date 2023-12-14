@@ -132,3 +132,11 @@ console.log(filteredArray);
 const sum = prices.reduce((prevVal, curVal) => prevVal + curVal, 0);
 
 console.log(sum);
+
+const data = "new york;10.99;2000";
+const transformedData = data.split(";");
+console.log(transformedData);
+
+const nameFragments = ["hba", "sum"];
+const names = nameFragments.join(" ");
+console.log(names);
