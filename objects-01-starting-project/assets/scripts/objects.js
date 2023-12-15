@@ -1,3 +1,7 @@
+const movieList = document.getElementById("movie-list");
+movieList.style["background-color"] = "red";
+movieList.style.display = "block";
+
 let person = {
   name: "hba",
   age: 28,
@@ -9,5 +13,5 @@ let person = {
 
 delete person.age;
 person.isAdmin = true;
-person.greet();
-console.log(person);
+// person.greet();
+console.log(person["name"]);
