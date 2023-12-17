@@ -81,7 +81,8 @@ const addMovieHandler = () => {
       [extraName]: extraValue,
     },
     id: Math.random().toString(),
-    getFormattedTitle() {
+    getFormattedTitle: () => {
+      console.log(this);
       return this.info.title.toUpperCase();
     },
   };
@@ -91,6 +92,7 @@ const addMovieHandler = () => {
 };
 
 const searchMovieHandler = () => {
+  console.log(this);
   const filterTerm = document.getElementById("filter-title").value;
   renderMovies(filterTerm);
 };
