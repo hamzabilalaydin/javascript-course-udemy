@@ -1,19 +1,31 @@
+class Product {
+  title = "DEFAULT";
+  imgUrl;
+  description;
+  price;
+
+  constructor(title, image, desc, price) {
+    this.title = title;
+    this.imgUrl = image;
+    this.description = desc;
+    this.price = price;
+  }
+}
+
 const productList = {
   products: [
-    {
-      title: "a pillow",
-      imgurl:
-        "https://bpb-us-w2.wpmucdn.com/u.osu.edu/dist/4/4139/files/2016/01/pillows-1z38kzh.jpg",
-      price: 19.99,
-      description: "A soft pillow",
-    },
-    {
-      title: "a carpet",
-      imgurl:
-        "https://mydecorative.com/wp-content/uploads/2016/11/carpet-designs.jpg",
-      price: 89.99,
-      description: "A carpet which you might like - or not.",
-    },
+    new Product(
+      "A pillow",
+      "https://bpb-us-w2.wpmucdn.com/u.osu.edu/dist/4/4139/files/2016/01/pillows-1z38kzh.jpg",
+      "A soft pillow",
+      19.99
+    ),
+    new Product(
+      "A carpet",
+      "https://mydecorative.com/wp-content/uploads/2016/11/carpet-designs.jpg",
+      "A carpet which you might like - or not.",
+      89.99
+    ),
   ],
   render() {
     const renderHook = document.getElementById("app");
@@ -24,7 +36,7 @@ const productList = {
       prodEl.className = "product-item";
       prodEl.innerHTML = `
       <div>
-        <img src="${prod.imgurl}" alt="${prod.title}"/>
+        <img src="${prod.imgUrl}" alt="${prod.title}"/>
         <div class = 'product-item__content'>
         <h2>${prod.title}</h2>
         <h3>\$${prod.price}</h3>
