@@ -25,6 +25,10 @@ function Person() {
   };
 }
 
+Person.describe = function () {
+  console.log("Creating persons...");
+};
+
 // Person.prototype = {
 //   printAge() {
 //     console.log(this.age);
@@ -40,4 +44,5 @@ console.dir(Person);
 const person = new Person();
 person.greet();
 person.printAge();
-console.log(person.__proto__);
+console.log(person);
+console.dir(Object);
