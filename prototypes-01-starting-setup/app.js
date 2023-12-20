@@ -18,5 +18,8 @@ function Person() {
   };
 }
 
+Person.__proto__;
+
 const person = new Person();
 person.greet();
+console.log(person.__proto__);
