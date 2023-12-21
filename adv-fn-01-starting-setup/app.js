@@ -42,3 +42,16 @@ const calculateIncomeTaxAmoount = createTaxCalculator(0.25);
 
 console.log(calculateVatAmount(100));
 console.log(calculateIncomeTaxAmoount(200));
+
+let userName = "Hba";
+
+function greetUser() {
+  // let name = "Anna";
+  console.log("Hi " + name);
+}
+
+let name = "Max";
+
+userName = "Sum";
+
+greetUser();
