@@ -2,13 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Project Board</title>
     <link rel="stylesheet" href="assets/styles/app.css" />
     <script src="assets/scripts/app.js" defer></script>
   </head>
   <body>
+    <template id="tooltip">
+      <h4>More Info</h4>
+      <p></p>
+    </template>
     <header id="main-header">
       <h1>Project Planner</h1>
     </header>
@@ -51,8 +58,8 @@
         >
           <h2>Book Hotel</h2>
           <p>
-            Academind conference takes place in December, don't forget to book a
-            hotel.
+            Academind conference takes place in December, don't forget to
+            book a hotel.
           </p>
           <button class="alt">More Info</button>
           <button>Activate</button>
