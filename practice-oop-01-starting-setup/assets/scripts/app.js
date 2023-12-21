@@ -10,6 +10,7 @@ class DOMHelper {
       newDestinationSelector
     );
     destinationElement.append(element);
+    element.scrollIntoView({ behavior: "smooth" });
   }
 }
 
