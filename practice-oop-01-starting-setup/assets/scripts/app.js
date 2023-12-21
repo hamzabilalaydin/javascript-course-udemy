@@ -13,9 +13,35 @@ class DOMHelper {
   }
 }
 
-class ToolTip {
+class Component {
+  constructor(hostElementId, insertBefore = false) {
+    if (hostElementId) {
+      this.hostElement = document.getElementById(hostElementId);
+    } else {
+      this.hostElement = document.body;
+    }
+    this.insertBefore = insertBefore;
+  }
+  detach() {
+    if (this.element) {
+      this.element.remove();
+      // this.element.parentElement.removeChild(this.element);
+    }
+  }
+
+  attach() {
+    this.hostElement.insertAdjacentElement(
+      this.insertBefore ? "beforbegin" : "beforeend",
+      this.element
+    );
+  }
+}
+
+class ToolTip extends Component {
   constructor(closeNotifierFunction) {
+    super();
     this.closeNotifier = closeNotifierFunction;
+    this.create();
   }
 
   closeToolTip = () => {
@@ -23,17 +49,12 @@ class ToolTip {
     this.closeNotifier();
   };
 
-  detach() {
-    this.element.remove();
-  }
-
-  attach() {
+  create() {
     const toolTipELement = document.createElement("div");
     toolTipELement.className = "card";
     toolTipELement.textContent = "Hi i am here!";
     toolTipELement.addEventListener("click", this.closeToolTip);
     this.element = toolTipELement;
-    document.body.append(toolTipELement);
   }
 }
 
