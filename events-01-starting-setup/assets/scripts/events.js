@@ -21,10 +21,16 @@ const anotherBtnClickHandler = () => {
 //   button.removeEventListener("click", btnClickHandler);
 // }, 3000);
 
-buttons.forEach((btn) => {
-  btn.addEventListener("mouseenter", btnClickHandler);
-});
+// buttons.forEach((btn) => {
+//   btn.addEventListener("mouseenter", btnClickHandler);
+// });
 
-window.addEventListener("scroll", (event) => {
+// window.addEventListener("scroll", (event) => {
+//   console.log(event);
+// });
+
+const form = document.querySelector("form");
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
   console.log(event);
 });
