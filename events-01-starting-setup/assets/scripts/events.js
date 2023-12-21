@@ -30,6 +30,7 @@ const anotherBtnClickHandler = () => {
 // });
 
 const form = document.querySelector("form");
+
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   console.log(event);
@@ -42,7 +43,7 @@ div.addEventListener("mouseenter", (event) => {
   console.log(event);
 });
 
-button.addEventListener("mouseenter", (event) => {
+button.addEventListener("click", (event) => {
   event.stopPropagation();
   // event.stopImmediatePropagation();
   console.log("CLICKED BUTTON");
@@ -61,4 +62,6 @@ list.addEventListener("click", (event) => {
   // console.log(event.currentTarget);
   // event.target.classList.toggle("highlight");
   event.target.closest("li").classList.toggle("highlight");
+  form.submit();
+  button.click();
 });
