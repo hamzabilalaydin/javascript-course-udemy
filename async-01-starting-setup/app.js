@@ -34,13 +34,14 @@ function trackUserHandler() {
     })
     .catch((err) => {
       console.log(err);
+      return "let's gooooo!";
     })
     .then((data) => {
       console.log(data, positionData);
     });
-  setTimeout(() => {
+  setTimer(3000).then(() => {
     console.log("Timer done!");
-  }, 0);
+  });
   console.log("Getting position...");
 }
 
