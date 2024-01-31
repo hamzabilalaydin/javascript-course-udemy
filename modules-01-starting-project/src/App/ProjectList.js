@@ -19,7 +19,6 @@ export class ProjectList {
     console.log(this.projects);
     this.connectDroppable();
   }
-
   connectDroppable() {
     const list = document.querySelector(`#${this.type}-projects ul`);
 

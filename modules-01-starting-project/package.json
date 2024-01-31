@@ -4,17 +4,26 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "set NODE_OPTIONS=--openssl-legacy-provider && webpack",
+    "build:dev": "set NODE_OPTIONS=--openssl-legacy-provider && webpack-dev-server",
+    "build:prod": "set NODE_OPTIONS=--openssl-legacy-provider &&webpack --config webpack.config.prod.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
     "eslint": "^8.56.0",
     "eslint-config-standard": "^17.1.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-n": "^16.6.2",
     "eslint-plugin-promise": "^6.1.1",
-    "webpack": "^5.90.0"
+    "webpack": "^5.90.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
   }
 }
