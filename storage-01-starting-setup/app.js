@@ -7,13 +7,14 @@ storeBtn.addEventListener("click", () => {
     name: "hba",
     age: 28,
   };
-  document.cookie = `uid=${userId}`;
+  document.cookie = `uid=${userId}; max-age=360`;
   document.cookie = `user=${JSON.stringify(user)}`;
 });
 retrBtn.addEventListener("click", () => {
+  console.log(document.cookie);
   const cookieData = document.cookie.split(";");
   const data = cookieData.map((i) => {
     return i.trim();
   });
-  console.log(data);
+  console.log(data[1].split("=")[1]);
 });
