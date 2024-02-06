@@ -13,7 +13,7 @@
     "sourceType": "module"
   },
   "rules": {
-    "quotes": ["error", "single"],
+    "quotes": "off",
     "semi": "error",
     "no-undef": "off"
   }
