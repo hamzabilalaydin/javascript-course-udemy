@@ -18,14 +18,24 @@ export class Modal {
         true
       );
 
-      modalElement.appendChild(contentElement);
+      this.modalElement.appendChild(contentElement);
 
-      document.body.insertAdjacentElement("afterbegin", modalElement);
-      document.body.insertAdjacentElement("afterbegin", backdropElement);
+      document.body.insertAdjacentElement("afterbegin", this.modalElement);
+      document.body.insertAdjacentElement(
+        "afterbegin",
+        this.backdropElement
+      );
     } else {
       alert(this.fallbackText);
     }
   }
 
-  hide() {}
+  hide() {
+    if (this.modalElement) {
+      document.body.removeChild(this.modalElement);
+      document.body.removeChild(this.backdropElement);
+      this.modalElement = null;
+      this.backdropElement = null;
+    }
+  }
 }
